@@ -31,14 +31,14 @@ public:
     string getLastName();
     string getEmailAddress();
     int getStudentAge();
-    int getCourseCompletionDays();
+    int* getDaysCompletion();
     DegreeProgram getDegreeProgram();
     void setStudentID(string student_ID);
     void setFirstName(string first_Name);
     void setLastName(string last_Name);
     void setEmailAddress(string email_Address);
     void setAge(int student_Age);
-    void setCourseCompletionDays(int days1, int days2, int days3);
+    void setDaysCompletion(int days1, int days2, int days3);
     void setDegreeProgram(DegreeProgram degree_Program);
     void print();
 
