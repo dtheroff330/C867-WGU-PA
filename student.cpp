@@ -49,23 +49,23 @@ DegreeProgram Student::getDegreeProgram()
 
 void Student::setStudentID(string student_ID) 
 { 
-    student_ID = student_ID; 
+    this->student_ID = student_ID; 
 }
 void Student::setFirstName(string first_Name) 
 { 
-    first_Name = first_Name; 
+    this->first_Name = first_Name; 
 }
 void Student::setLastName(string last_Name) 
 { 
-    last_Name = last_Name; 
+    this->last_Name = last_Name; 
 }
 void Student::setEmailAddress(string email_Address)
 { 
-    email_Address = email_Address; 
+    this->email_Address = email_Address; 
 }
 void Student::setAge(int student_Age)
 { 
-    student_Age = student_Age; 
+    this->student_Age = student_Age; 
 }
 void Student::setDaysCompletion(int daysC1, int daysC2, int daysC3)
 {
@@ -86,7 +86,7 @@ void Student::print()
              << "Email: " << email_Address << "  "
              << "Age: " << student_Age << "  "
              << "Days in Course: {" << days_Completion[0] << ", "
-             << days_Completion[1] << ", " << days_Completion[2] << "}   "
+             << days_Completion[1] << ", " << days_Completion[2] << "}  "
              << "Degree Program: " << degreeProgramStrings[degree_Program]
              << endl;
 }
