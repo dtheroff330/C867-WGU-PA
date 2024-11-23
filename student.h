@@ -7,8 +7,11 @@
 using std::string;
 
 
-class Student {
+class Student 
+{
+
 private:
+
     string student_ID;
     string first_Name;
     string last_Name;
@@ -18,7 +21,9 @@ private:
     int days_Completion[3];
 
     DegreeProgram degree_Program;
+
 public:
+
     Student();
     Student(string student_ID, string first_Name, string last_Name, string email_Address, int student_Age, int days_Completion[3], DegreeProgram degree_Program);
     string getStudentID();
