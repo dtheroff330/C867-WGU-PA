@@ -2,21 +2,42 @@
 #include "degree.h"
 #include <iostream>
 #include <string>
+
 using std::string;
 using std::cout;
 using std::endl;
 
-/*
+
 Student::Student()
 {
-    //add paramters for default constructor
+
+    this->student_ID = "";
+    this->first_Name = "";
+    this->last_Name = "";
+    this->email_Address = "";
+    this->student_Age = 0;
+    this->days_Completion[0] = 0;
+    this->days_Completion[1] = 0;
+    this->days_Completion[2] = 0;
+    this->degree_Program = SOFTWARE;
+
 }
-Student::Student()
+Student::Student(string student_ID, string first_Name, string last_Name, string email_Address, int student_Age, int days_Completion[], DegreeProgram degree_Program)
 {
-    //add paramters for full constructor
+
+	this->student_ID = student_ID;
+	this->first_Name = first_Name;
+	this->last_Name = last_Name;
+	this->email_Address = email_Address;
+	this->student_Age = student_Age;
+	this->days_Completion[0] = days_Completion[0];
+	this->days_Completion[1] = days_Completion[1];
+	this->days_Completion[2] = days_Completion[2];
+	this->degree_Program = degree_Program;
+    
 }
 
-*/
+
 
 string Student::getStudentID()
 {
