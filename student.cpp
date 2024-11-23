@@ -78,4 +78,17 @@ void Student::setDaysCompletion(int daysC1, int daysC2, int daysC3)
 void Student::setDegreeProgram(DegreeProgram degree_Program) 
 { 
     this->degree_Program = degree_Program; 
-} 
+}
+
+void Student::print()
+{
+        cout << "ID: " << student_ID << "  "
+             << "First Name: " << first_Name << "  "
+             << "Last Name:" << last_Name << "  "
+             << "Email: " << email_Address << "  "
+             << "Age: " << student_Age << "  "
+             << "Days in Course: {" << days_Completion[0] << ","
+             << days_Completion[1] << "," << days_Completion[2] << "}  "
+             << "Degree Program:" << degreeProgramStrings[degree_Program]
+             << endl;
+}
