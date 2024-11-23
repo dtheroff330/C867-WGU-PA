@@ -38,7 +38,7 @@ public:
     void setLastName(string last_Name);
     void setEmailAddress(string email_Address);
     void setAge(int student_Age);
-    void setDaysCompletion(int days1, int days2, int days3);
+    void setDaysCompletion(int daysC1, int daysC2, int daysC3);
     void setDegreeProgram(DegreeProgram degree_Program);
     void print();
 
