@@ -12,7 +12,7 @@ using std::string;
 class Roster
 {
 public:
-    Roster();
+    Roster(int class_Size);
     ~Roster();
     Student* classRosterArray[5];
     void parse(string student_Data);
@@ -22,4 +22,6 @@ public:
     void printAverageDaysInCourse(string student_ID);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degree_Program);
+    int class_Size;
+    int index;
 };
