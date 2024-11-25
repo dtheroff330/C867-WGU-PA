@@ -18,6 +18,10 @@ This project is the PA for WGU's C867 course and is intended to demonstrate know
 
 
 1. Open a terminal in VSC.
-2. Run this command to ensure all files are being included in compilation, g++ -g main.cpp roster.cpp student.cpp -o main
+2. Press CTRL + SHIFT + B to build the program.
+
+If this doesn't work - follow the below instructions!
+Run this command to ensure all files are being included in compilation, g++ -g main.cpp roster.cpp student.cpp -o main
+
 3. Following compilation, run ./main in the terminal or if configured correctly, simply hit F5. (F5 on my system led to a multitude of issues with the debugging terminal, but your mileage may vary, as this is a known linux issue.)
 4. If you wish to debug the program after using the "run ./main" method, simply type gdb ./main in the terminal.
