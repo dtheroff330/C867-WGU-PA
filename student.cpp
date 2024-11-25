@@ -59,7 +59,7 @@ int Student::getStudentAge()
 {
     return age;
 }
-int* Student::getDaysCompletion()
+int* Student::getDaysInCourse()
 {
     return daysInCourse;
 }
@@ -88,7 +88,7 @@ void Student::setAge(int age)
 { 
     this->age = age; 
 }
-void Student::setDaysCompletion(int daysInCourse1, int daysInCourse2, int daysInCourse3)
+void Student::setDaysInCourse(int daysInCourse1, int daysInCourse2, int daysInCourse3)
 {
     daysInCourse[0] = daysInCourse1;
     daysInCourse[1] = daysInCourse2;
