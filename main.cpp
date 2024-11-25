@@ -23,4 +23,37 @@ int main()
         "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
         "A5,Daniel,Theroff,dtherof@wgu.edu,22,40,50,70,SOFTWARE"
     };
+
+    Roster * classRoster = new Roster(5);
+    for (int i = 0; i < 5; i++)
+    {
+        classRoster->parse(studentData[i]);
+    };
+
+    classRoster->printAll();
+
+    classRoster->printInvalidEmails();
+
+    string studentIds[] = {"A1", "A2", "A3", "A4", "A5"};
+    int numStudents = sizeof(studentIds) / sizeof(studentIds[0]);
+
+    for (int i = 0; i < numStudents; i++)
+    {
+        classRoster->printAverageDaysInCourse(studentIds[i]);
+    }
+
+    classRoster->printByDegreeProgram(SOFTWARE);
+
+    classRoster->remove("A3");
+
+    classRoster->printAll();
+
+    classRoster->remove("A3");
+
+
+
+    classRoster->~Roster();
+    delete classRoster;
+
+    return 0;
 }
