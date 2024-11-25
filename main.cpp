@@ -13,8 +13,7 @@ int main()
     cout << "Course Title: C867 - Scripting and Programming - Applications" << endl;
     cout << "Programming Language: C++" << endl;
     cout << "Student ID: 011949764" << endl;
-    cout << "Student Name: Daniel Theroff" << endl
-         << endl;
+    cout << "Student Name: Daniel Theroff" << endl << endl;
 
     const string studentData[] =
         {
