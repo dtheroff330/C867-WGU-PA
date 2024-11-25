@@ -101,13 +101,9 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram)
 
 void Student::print()
 {
-    cout << "ID: " << studentID << "  "
-            << "First Name: " << firstName << "  "
-            << "Last Name: " << lastName << "  "
-            << "Email: " << emailAddress << "  "
-            << "Age: " << age << "  "
-            << "Days in Course: {" << daysInCourse[0] << ", "
-            << daysInCourse[1] << ", " << daysInCourse[2] << "}  "
+    cout << "ID: " << studentID << "  " << "First Name: " << firstName << "  " << "Last Name: " << lastName << "  "
+            << "Email: " << emailAddress << "  " << "Age: " << age << "  "
+            << "Days in Course: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}  "
             << "Degree Program: " << degreeProgramStrings[degreeProgram]
             << endl;
 }
