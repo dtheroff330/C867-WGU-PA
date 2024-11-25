@@ -155,7 +155,7 @@ void Roster::printAverageDaysInCourse(string studentID)
 
 void Roster::printInvalidEmails()
 {
-    cout << "Showing students with invalid email addresses:" << endl;
+    cout << "Showing students with invalid email addresses:" << endl << endl;
     for (int i = 0; i < classSize; i++)
     {
         if (classRosterArray[i] != nullptr)
