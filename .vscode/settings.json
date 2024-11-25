@@ -5,8 +5,19 @@
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**"
     ],
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "C_Cpp.default.compilerPath": "g++",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "editor.formatOnSave": true,
+    "C_Cpp.default.debugConfig": {
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/main",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "externalConsole": true
+    },
+    "C_Cpp.default.enableDebugFileAction": false,
     "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "editor.formatOnSave": true
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.osx": "zsh"
 }
