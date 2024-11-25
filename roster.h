@@ -9,6 +9,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
+//Task E1
 class Roster
 {
 private:
