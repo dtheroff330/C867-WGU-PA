@@ -9,13 +9,14 @@ using std::cout;
 using std::endl;
 using std::string;
 
-//Task E1
+// Task E1
 class Roster
 {
 private:
-    Student* classRosterArray[5];
+    Student *classRosterArray[5];
     int classSize = 0;
     int searchIndex = 0;
+
 public:
     Roster(int classSize);
     ~Roster();
@@ -26,4 +27,6 @@ public:
     void printAverageDaysInCourse(string studentID);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degreeProgram);
+
+    string searchStudentID(int searchIndex);
 };

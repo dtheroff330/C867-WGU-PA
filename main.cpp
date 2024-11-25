@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
-//Task F
+// Task F
 int main()
 {
     cout << "Course Title: C867 - Scripting and Programming - Applications" << endl;
@@ -35,12 +35,9 @@ int main()
 
     classRoster->printInvalidEmails();
 
-    string studentIds[] = {"A1", "A2", "A3", "A4", "A5"};
-    int numStudents = sizeof(studentIds) / sizeof(studentIds[0]);
-
-    for (int i = 0; i < numStudents; i++)
+    for (int i = 0; i < 5; i++)
     {
-        classRoster->printAverageDaysInCourse(studentIds[i]);
+        classRoster->printAverageDaysInCourse(classRoster->searchStudentID(i));
     }
 
     classRoster->printByDegreeProgram(SOFTWARE);

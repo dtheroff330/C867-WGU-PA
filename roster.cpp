@@ -32,7 +32,7 @@ Roster::~Roster()
     }
 }
 
-//Task E2
+// Task E2
 void Roster::parse(string studentData)
 {
     int start = 0;
@@ -92,7 +92,7 @@ void Roster::parse(string studentData)
     add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
-//Task E3
+// Task E3
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age,
                  int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
 {
@@ -180,4 +180,9 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
         }
     }
     cout << endl;
+}
+
+string Roster::searchStudentID(int searchIndex)
+{
+    return classRosterArray[searchIndex]->getStudentID();
 }
