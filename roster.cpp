@@ -133,12 +133,20 @@ void Roster::printAverageDaysInCourse(string studentID)
     cout << "Error: Student with ID " << studentID << " not found." << endl;
 }
 
-void printInvalidEmails()
+void Roster::printInvalidEmails()
 {
-    //public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
- 
-
-    //Note: A valid email should include an at sign ('@') and period ('.') and should not include a space (' ').
+    cout << "Students with invalid email addresses:" << endl;
+    for (int i = 0; i < classSize; i++)
+    {
+        if (classRosterArray[i] != nullptr)
+        {
+            string eAddress = classRosterArray[i]->getEmailAddress();
+            if (eAddress.find(' ') != string::npos || eAddress.find('@') == string::npos || eAddress.find('.') == string::npos)
+            {
+                cout << eAddress << " (is Invalid)" << endl;
+            }
+        }
+    }
 }
 
 void printByDegreeProgram(DegreeProgram degreeProgram)
