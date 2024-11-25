@@ -69,7 +69,6 @@ void Roster::parse(string studentData)
     string degreeProgramString = studentData.substr(start);
 
     DegreeProgram degreeProgram;
-    string degreeProgramString;
     if (degreeProgramString == "SECURITY") {
         degreeProgram = DegreeProgram::SECURITY;
     } else if (degreeProgramString == "NETWORK") {
@@ -83,9 +82,18 @@ void Roster::parse(string studentData)
     add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
-void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
-{
-    classRosterArray[classSize] = new Student(studentID, firstName, lastName, emailAddress, age, (int[3]){daysInCourse1, daysInCourse2, daysInCourse3}, degreeProgram);
+void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age,
+                 int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
+    if (searchIndex < 5)
+    {
+        int daysInCourse[3] = { daysInCourse1, daysInCourse2, daysInCourse3 };
+        classRosterArray[searchIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
+        searchIndex++;
+    }
+    else
+    {
+        cout << "Error: Cannot add more students. Roster is full." << endl;
+    }
 }
 
 void Roster::remove(string studentID)

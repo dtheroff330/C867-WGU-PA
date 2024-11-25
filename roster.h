@@ -14,7 +14,7 @@ class Roster
 private:
     Student* classRosterArray[5];
     int classSize = 0;
-    int searchIndex;
+    int searchIndex = 0;
 public:
     Roster(int classSize);
     ~Roster();
