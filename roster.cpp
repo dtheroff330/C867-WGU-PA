@@ -90,17 +90,47 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 
 void Roster::remove(string studentID)
 {
-    //public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.
+    bool isStudent = false;
+    for (int i = 0; i < classSize; i++)
+    {
+        if (classRosterArray[i] != nullptr && studentID == classRosterArray[i]->getStudentID())
+        {
+            classRosterArray[i] = nullptr;
+            isStudent = true;
+            break;
+        }
+    }
+
+    cout << "Student " << studentID << (isStudent ? " removed." : " Not Found.") << endl;
 }
 
 void Roster::printAll()
 {
-    //public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
+    cout << "Displaying all students:" << endl;
+    for (int i = 0; i < classSize; i++)
+    {
+        if (classRosterArray[i] != nullptr)
+        {
+            classRosterArray[i]->print();
+        }
+    }
+    cout << endl;
 }
 
-void printAverageDaysinCourse(string studentID)
+void Roster::printAverageDaysInCourse(string studentID)
 {
-    //public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
+    for (int i = 0; i < classSize; i++)
+    {
+        if (classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID)
+        {
+            int* daysInCourse = classRosterArray[i]->getDaysInCourse();
+            cout << "Average days in course for " << studentID << ": "
+                      << (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3 << endl;
+
+            return;
+        }
+    }
+    cout << "Error: Student with ID " << studentID << " not found." << endl;
 }
 
 void printInvalidEmails()
