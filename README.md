@@ -1,3 +1,18 @@
+This project is for WGU's C867 course, which is over C++.
+This project features a program that manages a roster of students and is able to display and change various parts of the provided student data.
+This project has been vigorously tested to ensure proper compilation and correct outputs.
+
+To compile this program, please follow these instructions -
+1. Open a terminal in the project directory.
+2. Run `g++ -g main.cpp roster.cpp student.cpp -o main`.
+3. Execute the program with `./main`.
+
+RUBRIC IS PROVIDED BELOW
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 PREFACE
 
 You are hired as a contractor to help a university migrate an existing student system to a new platform using C++ language. Since the application already exists, its requirements exist as well, and they are outlined in the next section. You are responsible for implementing the part of the system based on these requirements. A list of data is provided as part of these requirements. This part of the system is responsible for reading and manipulating the provided data.
@@ -30,7 +45,10 @@ You must use the rubric to direct the creation of your submission because it pro
 
 Tasks may not be submitted as cloud links, such as links to Google Docs, Google Slides, OneDrive, etc., unless specified in the task requirements. All other submissions must be file types that are uploaded and submitted as attachments (e.g., .docx, .pdf, .ppt).
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 INSTRUCTIONS
 
 A.  Modify the “studentData Table” to include your personal information as the last item.
