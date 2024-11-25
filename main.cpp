@@ -26,10 +26,11 @@ int main()
         };
 
     Roster *classRoster = new Roster(5);
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; ++i)
     {
-        classRoster->parse(studentData[i]);
-    };
+        string currentData = studentData[i];
+        classRoster->parse(currentData);
+    }
 
     classRoster->printAll();
 
