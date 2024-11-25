@@ -149,7 +149,8 @@ void Roster::printAverageDaysInCourse(string studentID)
             return;
         }
     }
-    cout << "Error: Student with ID " << studentID << " not found." << endl;
+    cout << "Error: Student with ID " << studentID << " not found." << endl
+         << endl;
 }
 
 void Roster::printInvalidEmails()
