@@ -8,33 +8,32 @@ using std::cout;
 using std::endl;
 
 //Task D1 and D2
-Student::Student()
+Student::Student() 
 {
+    studentID = "";
+    firstName = "";
+    lastName = "";
+    emailAddress = "";
+    age = 0;
+    degreeProgram = SOFTWARE;
 
-    this->studentID = "";
-    this->firstName = "";
-    this->lastName = "";
-    this->emailAddress = "";
-    this->age = 0;
-    this->daysInCourse[0] = 0;
-    this->daysInCourse[1] = 0;
-    this->daysInCourse[2] = 0;
-    this->degreeProgram = SOFTWARE;
-
+    for (int i = 0; i < 3; ++i) {
+        daysInCourse[i] = 0;
+    }
 }
+
 Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram)
 {
+    this->studentID = studentID;
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->emailAddress = emailAddress;
+    this->age = age;
+    this->degreeProgram = degreeProgram;
 
-	this->studentID = studentID;
-	this->firstName = firstName;
-	this->lastName = lastName;
-	this->emailAddress = emailAddress;
-	this->age = age;
-	this->daysInCourse[0] = daysInCourse[0];
-	this->daysInCourse[1] = daysInCourse[1];
-	this->daysInCourse[2] = daysInCourse[2];
-	this->degreeProgram = degreeProgram;
-    
+    for (int i = 0; i < 3; ++i) {
+        this->daysInCourse[i] = daysInCourse[i];
+    }
 }
 
 
