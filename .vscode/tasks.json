@@ -20,7 +20,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Build task for compiling specific C++ files"
+            "detail": "Compile and link all source files"
         }
     ]
 }
