@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <array>
 #include <iostream>
 #include "student.h"
 #include "degree.h"
@@ -13,16 +13,16 @@ class Roster
 {
 private:
     Student* classRosterArray[5];
-    int class_Size = 0;
-    int search_Index;
+    int classSize = 0;
+    int searchIndex;
 public:
-    Roster(int class_Size);
+    Roster(int classSize);
     ~Roster();
-    void parse(string student_Data);
-    void add(string student_ID, string first_Name, string last_Name, string email_Address, int student_Age, int daysC1, int daysC2, int daysC3, DegreeProgram degree_Program);
-    void remove(string student_ID);
+    void parse(string studentData);
+    void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+    void remove(string studentID);
     void printAll();
-    void printAverageDaysInCourse(string student_ID);
+    void printAverageDaysInCourse(string studentID);
     void printInvalidEmails();
-    void printByDegreeProgram(DegreeProgram degree_Program);
+    void printByDegreeProgram(DegreeProgram degreeProgram);
 };

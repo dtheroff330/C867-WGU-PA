@@ -10,10 +10,10 @@ using std::cout;
 using std::string;
 
 
-Roster::Roster(int class_Size)
+Roster::Roster(int classSize)
 {
-    this->class_Size = class_Size;
-    for (int i = 0; i < class_Size; i++)
+    this->classSize = classSize;
+    for (int i = 0; i < classSize; i++)
     {
         this->classRosterArray[i] = new Student;
     }
@@ -30,56 +30,57 @@ Roster::~Roster()
     }
 }
 
-void Roster::parse(string student_Data)
+void Roster::parse(string studentData)
 {
     int start = 0;
-    int end = student_Data.find(',');
+    int end = studentData.find(',');
 
-    string student_ID = student_Data.substr(start, end - start);
-
-    start = end + 1;
-    end = student_Data.find(',', start);
-    string first_Name = student_Data.substr(start, end - start);
+    string studentID = studentData.substr(start, end - start);
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    string last_Name = student_Data.substr(start, end - start);
+    end = studentData.find(',', start);
+    string firstName = studentData.substr(start, end - start);
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    string email_Address = student_Data.substr(start, end - start);
+    end = studentData.find(',', start);
+    string lastName = studentData.substr(start, end - start);
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    int student_Age = std::stoi(student_Data.substr(start, end - start));
+    end = studentData.find(',', start);
+    string emailAddress = studentData.substr(start, end - start);
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    int daysC1 = std::stoi(student_Data.substr(start, end - start));
+    end = studentData.find(',', start);
+    int age = std::stoi(studentData.substr(start, end - start));
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    int daysC2 = std::stoi(student_Data.substr(start, end - start));
+    end = studentData.find(',', start);
+    int daysInCourse1 = std::stoi(studentData.substr(start, end - start));
 
     start = end + 1;
-    end = student_Data.find(',', start);
-    int daysC3 = std::stoi(student_Data.substr(start, end - start));
+    end = studentData.find(',', start);
+    int daysInCourse2 = std::stoi(studentData.substr(start, end - start));
 
     start = end + 1;
-    std::string degree_program_str = student_Data.substr(start);
+    end = studentData.find(',', start);
+    int daysInCourse3 = std::stoi(studentData.substr(start, end - start));
 
-    DegreeProgram degree_Program;
-    string degree_Program_String;
-    if (degree_Program_String == "SECURITY") {
-        degree_Program = DegreeProgram::SECURITY;
-    } else if (degree_Program_String == "NETWORK") {
-        degree_Program = DegreeProgram::NETWORK;
-    } else if (degree_Program_String == "SOFTWARE") {
-        degree_Program = DegreeProgram::SOFTWARE;
+    start = end + 1;
+    string degreeProgramString = studentData.substr(start);
+
+    DegreeProgram degreeProgram;
+    string degreeProgramString;
+    if (degreeProgramString == "SECURITY") {
+        degreeProgram = DegreeProgram::SECURITY;
+    } else if (degreeProgramString == "NETWORK") {
+        degreeProgram = DegreeProgram::NETWORK;
+    } else if (degreeProgramString == "SOFTWARE") {
+        degreeProgram = DegreeProgram::SOFTWARE;
     } else {
         cout << "Not a valid Degree Program" << endl;
     }
 
-    add(student_ID, first_Name, last_Name, email_Address, student_Age, daysC1, daysC2, daysC3, degree_Program);
+    add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
+
 

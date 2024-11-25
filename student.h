@@ -5,6 +5,8 @@
 #include "degree.h"
 
 using std::string;
+using std::cout;
+using std::endl;
 
 
 class Student 
@@ -12,20 +14,20 @@ class Student
 
 private:
 
-    string student_ID;
-    string first_Name;
-    string last_Name;
-    string email_Address;
+    string studentID;
+    string firstName;
+    string lastName;
+    string emailAddress;
 
-    int student_Age;
-    int days_Completion[3];
+    int age;
+    int daysInCourse[3];
 
-    DegreeProgram degree_Program;
+    DegreeProgram degreeProgram;
 
 public:
 
     Student();
-    Student(string student_ID, string first_Name, string last_Name, string email_Address, int student_Age, int days_Completion[3], DegreeProgram degree_Program);
+    Student(string studnetID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[3], DegreeProgram degreeProgram);
     string getStudentID();
     string getFirstName();
     string getLastName();
@@ -33,13 +35,13 @@ public:
     int getStudentAge();
     int* getDaysCompletion();
     DegreeProgram getDegreeProgram();
-    void setStudentID(string student_ID);
-    void setFirstName(string first_Name);
-    void setLastName(string last_Name);
-    void setEmailAddress(string email_Address);
-    void setAge(int student_Age);
-    void setDaysCompletion(int daysC1, int daysC2, int daysC3);
-    void setDegreeProgram(DegreeProgram degree_Program);
+    void setStudentID(string studentID);
+    void setFirstName(string firstName);
+    void setLastName(string lastName);
+    void setEmailAddress(string emailAddress);
+    void setAge(int age);
+    void setDaysCompletion(int daysInCourse1, int daysInCourse2, int daysInCourse3);
+    void setDegreeProgram(DegreeProgram degreeProgram);
     void print();
 
 };

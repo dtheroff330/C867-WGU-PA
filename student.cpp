@@ -11,29 +11,29 @@ using std::endl;
 Student::Student()
 {
 
-    this->student_ID = "";
-    this->first_Name = "";
-    this->last_Name = "";
-    this->email_Address = "";
-    this->student_Age = 0;
-    this->days_Completion[0] = 0;
-    this->days_Completion[1] = 0;
-    this->days_Completion[2] = 0;
-    this->degree_Program = SOFTWARE;
+    this->studentID = "";
+    this->firstName = "";
+    this->lastName = "";
+    this->emailAddress = "";
+    this->age = 0;
+    this->daysInCourse[0] = 0;
+    this->daysInCourse[1] = 0;
+    this->daysInCourse[2] = 0;
+    this->degreeProgram = SOFTWARE;
 
 }
-Student::Student(string student_ID, string first_Name, string last_Name, string email_Address, int student_Age, int days_Completion[], DegreeProgram degree_Program)
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram)
 {
 
-	this->student_ID = student_ID;
-	this->first_Name = first_Name;
-	this->last_Name = last_Name;
-	this->email_Address = email_Address;
-	this->student_Age = student_Age;
-	this->days_Completion[0] = days_Completion[0];
-	this->days_Completion[1] = days_Completion[1];
-	this->days_Completion[2] = days_Completion[2];
-	this->degree_Program = degree_Program;
+	this->studentID = studentID;
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->emailAddress = emailAddress;
+	this->age = age;
+	this->daysInCourse[0] = daysInCourse[0];
+	this->daysInCourse[1] = daysInCourse[1];
+	this->daysInCourse[2] = daysInCourse[2];
+	this->degreeProgram = degreeProgram;
     
 }
 
@@ -41,73 +41,73 @@ Student::Student(string student_ID, string first_Name, string last_Name, string 
 
 string Student::getStudentID()
 {
-    return student_ID;
+    return studentID;
 }
 string Student::getFirstName()
 {
-    return first_Name;
+    return firstName;
 }
 string Student::getLastName()
 {
-    return last_Name;
+    return lastName;
 }
 string Student::getEmailAddress()
 {
-    return email_Address;
+    return emailAddress;
 }
 int Student::getStudentAge()
 {
-    return student_Age;
+    return age;
 }
 int* Student::getDaysCompletion()
 {
-    return days_Completion;
+    return daysInCourse;
 }
 DegreeProgram Student::getDegreeProgram()
 {
-    return degree_Program;
+    return degreeProgram;
 }
 
-void Student::setStudentID(string student_ID) 
+void Student::setStudentID(string studentID) 
 { 
-    this->student_ID = student_ID; 
+    this->studentID = studentID; 
 }
-void Student::setFirstName(string first_Name) 
+void Student::setFirstName(string firstName) 
 { 
-    this->first_Name = first_Name; 
+    this->firstName = firstName; 
 }
-void Student::setLastName(string last_Name) 
+void Student::setLastName(string lastName) 
 { 
-    this->last_Name = last_Name; 
+    this->lastName = lastName; 
 }
-void Student::setEmailAddress(string email_Address)
+void Student::setEmailAddress(string emailAddress)
 { 
-    this->email_Address = email_Address; 
+    this->emailAddress = emailAddress; 
 }
-void Student::setAge(int student_Age)
+void Student::setAge(int age)
 { 
-    this->student_Age = student_Age; 
+    this->age = age; 
 }
-void Student::setDaysCompletion(int daysC1, int daysC2, int daysC3)
+void Student::setDaysCompletion(int daysInCourse1, int daysInCourse2, int daysInCourse3)
 {
-    days_Completion[0] = daysC1;
-    days_Completion[1] = daysC2;
-    days_Completion[2] = daysC3;
+    daysInCourse[0] = daysInCourse1;
+    daysInCourse[1] = daysInCourse2;
+    daysInCourse[2] = daysInCourse3;
 }
-void Student::setDegreeProgram(DegreeProgram degree_Program) 
+void Student::setDegreeProgram(DegreeProgram degreeProgram) 
 { 
-    this->degree_Program = degree_Program; 
+    this->degreeProgram = degreeProgram; 
 }
 
 void Student::print()
 {
-        cout << "ID: " << student_ID << "  "
-             << "First Name: " << first_Name << "  "
-             << "Last Name: " << last_Name << "  "
-             << "Email: " << email_Address << "  "
-             << "Age: " << student_Age << "  "
-             << "Days in Course: {" << days_Completion[0] << ", "
-             << days_Completion[1] << ", " << days_Completion[2] << "}  "
-             << "Degree Program: " << degreeProgramStrings[degree_Program]
+        cout << "ID: " << studentID << "  "
+             << "First Name: " << firstName << "  "
+             << "Last Name: " << lastName << "  "
+             << "Email: " << emailAddress << "  "
+             << "Age: " << age << "  "
+             << "Days in Course: {" << daysInCourse[0] << ", "
+             << daysInCourse[1] << ", " << daysInCourse[2] << "}  "
+             << "Degree Program: " << degreeProgramStrings[degreeProgram]
              << endl;
 }
