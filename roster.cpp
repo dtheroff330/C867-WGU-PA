@@ -121,8 +121,7 @@ void Roster::remove(string studentID)
         }
     }
 
-    cout << "Student " << studentID << (isStudent ? " removed." : " Not Found.") << endl
-         << endl;
+    cout << "Student " << studentID << (isStudent ? " removed." : " Not Found.") << endl << endl;
 }
 
 void Roster::printAll()
