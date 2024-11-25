@@ -35,9 +35,10 @@ int main()
 
     classRoster->printInvalidEmails();
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; ++i)
     {
-        classRoster->printAverageDaysInCourse(classRoster->searchStudentID(i));
+        string studentID = classRoster->searchStudentID(i);
+        classRoster->printAverageDaysInCourse(studentID);
     }
 
     classRoster->printByDegreeProgram(SOFTWARE);
