@@ -22,10 +22,13 @@ Roster::Roster(int classSize)
 Roster::~Roster()
 {
     int i = 0;
-    while (i < 5) 
+    while (i < 5)
     {
-        delete classRosterArray[i];
-        classRosterArray[i] = nullptr;
+        if (classRosterArray[i] != nullptr)
+        {
+            delete classRosterArray[i];
+            classRosterArray[i] = nullptr;
+        }
         i++;
     }
 }
