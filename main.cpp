@@ -13,7 +13,7 @@ using std::string;
 //Main function for rubric's task F
 int main()
 {
-    
+    cout << endl;
     cout << "Course Title: C867 - Scripting and Programming - Applications" << endl;
     cout << "Programming Language: C++" << endl;
     cout << "Student ID: 011949764" << endl;
