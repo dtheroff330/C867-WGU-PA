@@ -19,7 +19,8 @@ Student::Student()
     age = 0;
     degreeProgram = SOFTWARE;
 
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i)
+    {
         daysInCourse[i] = 0;
     }
 }
@@ -34,7 +35,8 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->age = age;
     this->degreeProgram = degreeProgram;
 
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i)
+    {
         this->daysInCourse[i] = daysInCourse[i];
     }
 }
