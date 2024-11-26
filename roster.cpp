@@ -110,15 +110,16 @@ void Roster::parse(string studentData)
 // Adds a student to the roster, Task E2
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
 {
-    if (searchIndex < 5)
+    if (searchIndex < 5) // Array size as per given student data
     {
         int daysInCourse[3] = {daysInCourse1, daysInCourse2, daysInCourse3};
         classRosterArray[searchIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
         searchIndex++;
     }
+    // Array size would need to manually be edited in roster.h to avoid this limit
     else
     {
-        cout << "Error: Cannot add more students. Roster is full." << endl;
+        cout << "Roster can only have 5 students." << endl;
     }
 }
 
