@@ -183,7 +183,7 @@ void Roster::printAverageDaysInCourse(string studentID)
                 return;
             }
         }
-        cout << "Error: Student with ID " << studentID << " could not be located." << endl;
+        cout << studentID << " could not be located in roster." << endl;
     }
 }
 
