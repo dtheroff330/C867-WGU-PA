@@ -28,8 +28,7 @@ public:
     void parse(string studentData);
 
     // Adds a student to the roster, Task E2
-    void add(string studentID, string firstName, string lastName, string emailAddress, int age,
-             int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+    void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
 
     // Removes a student from the created roster, Task E2
     void remove(string studentID);

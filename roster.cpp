@@ -97,8 +97,7 @@ void Roster::parse(string studentData)
 }
 
 // Adds a student to the roster, Task E2
-void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age,
-                 int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
+void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
 {
     if (searchIndex < 5)
     {
