@@ -15,7 +15,7 @@ class Roster
 {
 private:
     // Array that holds the data shown in the student data table from main.cpp, Task E1
-    Student* classRosterArray[5] = {};
+    Student* classRosterArray[5] = {}; //Set to 5 by default, but could be edited if you wanted to have more than the default 5 students on a roster
     int classSize = 0;  
     int searchIndex = 0;
 
