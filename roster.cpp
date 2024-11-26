@@ -69,10 +69,19 @@ void Roster::parse(string studentData)
     getline(ss, emailAddress, ',');
 
 
-    age = stoi((getline(ss, studentID, ','), studentID));
-    daysInCourse1 = stoi((getline(ss, studentID, ','), studentID));
-    daysInCourse2 = stoi((getline(ss, studentID, ','), studentID));
-    daysInCourse3 = stoi((getline(ss, studentID, ','), studentID));
+    string tempString;
+    getline(ss, tempString, ',');
+    age = stoi(tempString);
+
+    getline(ss, tempString, ',');
+    daysInCourse1 = stoi(tempString);
+
+    getline(ss, tempString, ',');
+    daysInCourse2 = stoi(tempString);
+
+    getline(ss, tempString, ',');
+    daysInCourse3 = stoi(tempString);
+
 
     getline(ss, degreeProgramString); 
     DegreeProgram degreeProgram;
@@ -172,7 +181,7 @@ void Roster::printInvalidEmails()
             string eAddress = classRosterArray[i]->getEmailAddress();
             if (eAddress.find(' ') != string::npos || eAddress.find('@') == string::npos || eAddress.find('.') == string::npos)
             {
-                cout << eAddress << " (is Invalid)" << endl;
+                cout << eAddress << " (is Invalid)" << endl << endl;
             }
         }
     }
