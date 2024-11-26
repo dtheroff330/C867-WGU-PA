@@ -42,7 +42,7 @@ Roster::~Roster()
 
 /* 
 Uses stringstream to avoid extremely repetitive calls to .find and .substr
-Prior method of using an index was difficult to debug and read due to length
+Prior method of using an index was difficult to read due to length
 */
 
 // Function definition for parse function, Task E2
