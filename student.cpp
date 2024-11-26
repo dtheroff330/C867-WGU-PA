@@ -39,7 +39,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     }
 }
 
-// Accessor function definintions for a student, Task D2
+// Accessor function definitions for a student, Task D2
 string Student::getStudentID()
 { 
     return studentID;
