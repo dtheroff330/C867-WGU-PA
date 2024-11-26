@@ -1,3 +1,4 @@
+
 #include "roster.h"
 #include "degree.h"
 #include "student.h"
@@ -5,10 +6,12 @@
 #include <string>
 #include <array>
 
+// Uses std namespace for specific things to avoid repetitive typing
 using std::cout;
 using std::endl;
 using std::string;
 
+// Full constructor for roster class
 Roster::Roster(int classSize)
 {
     this->classSize = classSize;
@@ -18,6 +21,7 @@ Roster::Roster(int classSize)
     }
 }
 
+// Full destructor for the roster class
 Roster::~Roster()
 {
     int i = 0;
@@ -32,7 +36,7 @@ Roster::~Roster()
     }
 }
 
-// Task E2
+// Function definition for parse function, Task E2
 void Roster::parse(string studentData)
 {
     int start = 0;
@@ -92,7 +96,7 @@ void Roster::parse(string studentData)
     add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
-// Task E3
+// Adds a student to the roster, Task E2
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age,
                  int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram)
 {
@@ -108,6 +112,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
     }
 }
 
+// Removes a student from the created roster, Task E2
 void Roster::remove(string studentID)
 {
     bool isStudent = false;
@@ -124,6 +129,7 @@ void Roster::remove(string studentID)
     cout << "Student " << studentID << (isStudent ? " removed." : " Not Found.") << endl << endl;
 }
 
+// Prints out all students from the created roster, Task E2
 void Roster::printAll()
 {
     cout << "Showing all students:" << endl;
@@ -137,6 +143,7 @@ void Roster::printAll()
     cout << endl;
 }
 
+// Prints average days in 3 courses for an individual student, Task E2
 void Roster::printAverageDaysInCourse(string studentID)
 {
     for (int i = 0; i < classSize; i++)
@@ -153,6 +160,7 @@ void Roster::printAverageDaysInCourse(string studentID)
     cout << "Error: Student with ID " << studentID << " not found." << endl << endl;
 }
 
+// Prints students with emails that don't follow good conventions, Task E2
 void Roster::printInvalidEmails()
 {
     cout << "Showing students with invalid email addresses:" << endl << endl;
@@ -168,6 +176,8 @@ void Roster::printInvalidEmails()
         }
     }
 }
+
+// Prints students dependent on the chosen degree program, Task E2
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
 {
     cout << endl;
@@ -182,6 +192,7 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
     cout << endl;
 }
 
+// Grabs a student's ID from the roster by using an index
 string Roster::searchStudentID(int searchIndex)
 {
     return classRosterArray[searchIndex]->getStudentID();
