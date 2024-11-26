@@ -116,10 +116,10 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
         classRosterArray[searchIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
         searchIndex++;
     }
-    // Array size would need to manually be edited in roster.h to avoid this limit
+    // Array size would need to manually be edited in roster.h to avoid this limit, as well as the search index above
     else
     {
-        cout << "Roster can only have 5 students." << endl;
+        cout << "Roster is full. Cannot add more students at this time." << endl;
     }
 }
 
