@@ -198,7 +198,7 @@ void Roster::printInvalidEmails()
             string eAddress = classRosterArray[i]->getEmailAddress();
             if (eAddress.find(' ') != string::npos || eAddress.find('@') == string::npos || eAddress.find('.') == string::npos)
             {
-                cout << eAddress << " is an invalid Address. Please rewrite." << endl << endl;
+                cout << eAddress << "is invalid!" << endl << endl;
             }
         }
     }
