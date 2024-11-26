@@ -43,12 +43,8 @@ int main()
     // Calls printInvalidEmails function, Task F4
     classRoster->printInvalidEmails();
 
-    // Calls searchStudentID in order to grab student ID's for printAverageDaysInCourse function, Task F4
-    for (int i = 0; i < 5; ++i)
-    {
-        string studentID = classRoster->searchStudentID(i);
-        classRoster->printAverageDaysInCourse(studentID);
-    }
+    // Calls printAverageDaysInCourse function, uses all students by default, Task F4
+    classRoster->printAverageDaysInCourse();
 
     // Calls printByDegreeProgram function, specifically to print students in the software program, Task F4
     classRoster->printByDegreeProgram(SOFTWARE);

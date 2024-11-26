@@ -156,18 +156,34 @@ void Roster::printAll()
 // Prints average days in 3 courses for an individual student, Task E2
 void Roster::printAverageDaysInCourse(string studentID)
 {
-    for (int i = 0; i < classSize; i++)
+    if (studentID.empty())
     {
-        if (classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID)
+        cout << "Average days in course for all students:" << endl;
+        for (int i = 0; i < classSize; i++)
         {
-            int *daysInCourse = classRosterArray[i]->getDaysInCourse();
-            cout << "Average days in course for " << studentID << ": "
-                 << (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3 << endl;
-
-            return;
+            if (classRosterArray[i] != nullptr)
+            {
+                string studentID = classRosterArray[i]->getStudentID();
+                int *daysInCourse = classRosterArray[i]->getDaysInCourse();
+                int averageTime = (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3;
+                cout << "ID: " << studentID << ", Average Days for Student: " << averageTime << endl;
+            }
         }
     }
-    cout << "Error: Student with ID " << studentID << " not found." << endl << endl;
+    else
+    {
+        for (int i = 0; i < classSize; i++)
+        {
+            if (classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID)
+            {
+                int *daysInCourse = classRosterArray[i]->getDaysInCourse();
+                int averageTime = (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3;
+                cout << "ID: " << studentID << ", Average Days for Student: " << averageTime << endl;
+                return;
+            }
+        }
+        cout << "Error: Student with ID " << studentID << " could not be located." << endl;
+    }
 }
 
 // Prints students with emails that don't follow good conventions, Task E2
@@ -202,8 +218,3 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
     cout << endl;
 }
 
-// Grabs a student's ID from the roster by using an index
-string Roster::searchStudentID(int searchIndex)
-{
-    return classRosterArray[searchIndex]->getStudentID();
-}

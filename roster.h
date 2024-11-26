@@ -37,14 +37,11 @@ public:
     void printAll();
 
     // Prints average days in 3 courses for an individual student, Task E2
-    void printAverageDaysInCourse(string studentID);
+    void printAverageDaysInCourse(string studentID = "");
 
     // Prints students with emails that don't follow good conventions, Task E2
     void printInvalidEmails();
 
     // Prints students dependent on the chosen degree program, Task E2
     void printByDegreeProgram(DegreeProgram degreeProgram);
-
-    // Grabs a student's ID from the roster by using an index
-    string searchStudentID(int searchIndex);
 };
