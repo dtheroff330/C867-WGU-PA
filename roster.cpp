@@ -68,20 +68,16 @@ void Roster::parse(string studentData)
     getline(ss, lastName, ',');  
     getline(ss, emailAddress, ',');
 
-
     string tempString;
     getline(ss, tempString, ',');
     age = stoi(tempString);
-
+   
     getline(ss, tempString, ',');
     daysInCourse1 = stoi(tempString);
-
     getline(ss, tempString, ',');
     daysInCourse2 = stoi(tempString);
-
     getline(ss, tempString, ',');
     daysInCourse3 = stoi(tempString);
-
 
     getline(ss, degreeProgramString); 
     DegreeProgram degreeProgram;
